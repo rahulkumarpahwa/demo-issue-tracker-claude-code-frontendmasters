@@ -42,3 +42,18 @@
 
 15. What is the hierarchy of Claude Code settings when there are conflicts between global and project-level permissions?
 15. The hierarchy from highest to lowest precedence is: managed settings (enterprise/organization level), global settings, project settings, then user settings. Higher-level settings always take precedence over lower-level ones, ensuring that team or company permissions cannot be overridden by individual users.
+
+16. What is the purpose of Advisor mode in Claude?
+16. Advisor mode allows you to use a different model (like Opus) specifically for planning tasks while remaining on another model (like Sonnet) for implementation. This lets you leverage the deeper reasoning capabilities of one model for planning without having to manually switch models.
+
+17. What are the four effort level settings available in Claude Opus 4.6, and what do they control?
+17. As of Opus 4.6, the four effort levels are low, medium, high, and max. These levels control the amount of thinking and reasoning the model will do for a specific prompt. The effort level gets appended to the prompt so the model understands how deeply it should reason.
+
+18. What is a common reason why Claude might refuse to complete a task or appear lazy in its responses?
+18. The effort level may be set too low (medium or low instead of high or max). Before switching to a different model like Opus or Haiku, adjusting the effort level can often resolve the issue.
+
+19. What is the trade-off when setting the effort level to max?
+19. Setting the effort level to max provides deeper reasoning but results in higher inference costs and more expensive usage. The model may also overthink simple tasks that don't require extensive reasoning.
+
+20. What is the standard context window size, and what is the extended limit available?
+20. The standard context window is 200,000 tokens, but it can be extended up to 1 million tokens.
