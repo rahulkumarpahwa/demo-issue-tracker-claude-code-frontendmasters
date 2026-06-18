@@ -27,3 +27,18 @@
 
 10. What is Plan Mode in Claude Code and how is it activated?
 10. Plan Mode instructs Claude to create an implementation plan without writing any code yet. It can be activated by using shift+tab in the CLI or selecting it from a dropdown in the desktop app. Alternatively, you can simply prompt Claude directly to plan first before coding, as Plan Mode essentially adds a instruction to the prompt telling the model not to code anything yet.
+
+11. What is the purpose of plan mode in Claude Code?
+11. Plan mode allows Claude to review and plan changes without immediately executing code or making modifications. It's a way to see what Claude intends to do before it actually performs any actions.
+
+12. Where are permissions for Claude Code defined?
+12. Permissions are defined in the .claude/settings.json file, where you can specify allow lists, deny lists, ask prompts, and default modes for different tool calls.
+
+13. What is the difference between an allow list and a deny list in Claude Code permissions?
+13. An allow list contains commands that run with no prompts (executed automatically), while a deny list contains commands that Claude is prevented from executing. There's also an ask list for commands that require explicit user confirmation before execution.
+
+14. What does the "fewer permission prompts" command do?
+14. The "fewer permission prompts" command analyzes your previous Claude Code sessions, identifies tool calls that you've frequently accepted, and automatically adds them to your permissions settings to reduce repetitive prompting.
+
+15. What is the hierarchy of Claude Code settings when there are conflicts between global and project-level permissions?
+15. The hierarchy from highest to lowest precedence is: managed settings (enterprise/organization level), global settings, project settings, then user settings. Higher-level settings always take precedence over lower-level ones, ensuring that team or company permissions cannot be overridden by individual users.

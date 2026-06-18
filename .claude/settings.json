@@ -1,0 +1,11 @@
+{
+    "permissions": {
+        "deny": [
+            "Edit(package.json)"
+        ],
+        "allow": [
+            "mcp__linear-server__get_issue",
+            "Bash(bun run typecheck)"
+        ]
+    }
+}
