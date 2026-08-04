@@ -111,3 +111,15 @@ NOTE : The /agents wizard has been removed as of v.2..1.198. Source
 
 37. Why do sub-agents tend to consume a large number of tokens?
 37. Sub-agents use a lot of tokens because they essentially start from scratch with their own context. They don't have cached prompts at that point, and when multiple sub-agents run in parallel, each one makes its own requests, multiplying token usage significantly.
+
+38. What is the key difference between sub-agents and agent teams in terms of communication?
+38. Sub-agents run independently and cannot communicate with each other - the main thread only sees their final results. Agent teams, however, can actively communicate with each other while working, coordinating their tasks together.
+
+39. How do agent teams determine when their work is complete?
+39. Agent teams work against a shared task list created by the main agent. They check this task list continuously, and only when all tasks are complete do they end their work.
+
+40. What is a significant drawback of using agent teams compared to sub-agents?
+40. Agent teams use a lot more tokens than sub-agents. For most use cases, a sub-agent would be sufficient and more efficient.
+
+41. What types of specialized roles can be assigned to team agents?
+41. Team agents can be assigned specialized roles such as code reviewer, implementer, PR agent, UI designer, or QA teammate. The system understands what the appropriate system prompt should be for each role.
