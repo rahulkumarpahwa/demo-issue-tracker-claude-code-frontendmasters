@@ -123,3 +123,15 @@ NOTE : The /agents wizard has been removed as of v.2..1.198. Source
 
 41. What types of specialized roles can be assigned to team agents?
 41. Team agents can be assigned specialized roles such as code reviewer, implementer, PR agent, UI designer, or QA teammate. The system understands what the appropriate system prompt should be for each role.
+
+42. What can plugins bundle together in Claude Code?
+42. Plugins can bundle things like skills, agents, hooks, and MCP into something reusable that can be shared with teams or other people.
+
+43. What command can be used to manage and view available plugins in Claude Code?
+43. The plugins command can be used to manage plugins and see what's already available in the marketplace.
+
+44. When should a hook be used instead of a skill in Claude Code?
+44. A hook should be used when something needs to be enforced. While skills can be added to prompts, they don't enforce behavior. Hooks are ideal for requirements like running type checks before commits.
+
+45. What is the purpose of the CLAUDE_PLUGIN_ROOT variable in plugin development?
+45. The CLAUDE_PLUGIN_ROOT variable ensures consistent path references across different teams and organizations. Since plugins are shared, the root directory is dynamic, and this variable makes paths relative to the plugin's root regardless of where it's installed.
