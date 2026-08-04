@@ -69,3 +69,18 @@
 
 24. How can you pass arguments to a skill in Claude Code?
 24. You can pass arguments to skills using standard argument syntax. For example, if you have a deploy skill that accepts an environment argument, you can invoke it with "deploy staging" or "deploy production", and the skill will use the specified argument in its execution.
+
+25. What is the primary purpose of Skill Creator in relation to skills?
+25. Skill Creator is used to automatically create skills and can also check if a skill actually improves workflow performance. It runs evaluations (evals) on skills to test how the codebase performs with and without the skill, ensuring that added skills actually improve the code rather than just adding unnecessary tokens.
+
+26. What is the difference between skills and tool calls in Claude Code?
+26. Skills are packaged prompts written in markdown that help avoid retyping the same prompts and can be shared with teammates. Tool calls are different - they allow the model to perform specific actions like reading or editing files. Tool calls are necessary for an agent to function; without them, Claude would just be a chatbot that responds with text.
+
+27. Why should you use the @ symbol when referencing specific files in prompts?
+27. Using @ in prompts to reference files attaches the file directly to the prompt itself, which reduces or removes one tool call (like read or write operations). This makes the interaction more efficient by including the file context upfront rather than requiring Claude to make an additional tool call to access it.
+
+28. What is the purpose of the when_to_use field in skill front matter?
+28. The when_to_use field provides additional context specifically for the model to understand when to invoke a particular skill. While the description field helps both users and the model (and is visible in the CLI), the when_to_use field gives even more precision for the model without cluttering the user-facing description.
+
+29. How does using context_fork in a skill affect where the skill runs?
+29. Using context_fork in a skill configuration makes the skill run in a sub-agent rather than the main context. The sub-agent runs in parallel with a brand new context, and only the results are returned to the main conversation. This prevents the main context from being cluttered with intermediate tool calls and can improve the quality of model output.
