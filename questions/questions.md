@@ -84,3 +84,18 @@
 
 29. How does using context_fork in a skill affect where the skill runs?
 29. Using context_fork in a skill configuration makes the skill run in a sub-agent rather than the main context. The sub-agent runs in parallel with a brand new context, and only the results are returned to the main conversation. This prevents the main context from being cluttered with intermediate tool calls and can improve the quality of model output.
+
+30. What are hooks in the context of agentic systems?
+30. Hooks allow custom logic to run at specific points in the agentic loop or lifecycle. They can be configured to trigger specific events at particular points in the loop, such as executing a prompt, calling an HTTP endpoint, or running a shell command.
+
+31. What is the difference between pre-tool use and post-tool use hooks?
+31. Pre-tool use hooks fire after the model emits a tool call but before it executes, allowing you to add validation or block certain operations. Post-tool use hooks fire after a tool has successfully executed, which is useful for tasks like formatting or linting.
+
+32. When does the 'session start' hook fire?
+32. The 'session start' hook fires when Claude Code opens or when the CLI starts.
+
+33. How can you add a hook in Claude Code?
+33. You can add a hook in your settings.json file. For example, to run a type check after a tool use that edits or writes files, you would add a post-tool use hook with a command like bun run typecheck.
+
+34. What is a Claude Code plugin and what can it contain?
+34. A plugin is a package stored in a separate repository or folder that contains a .claude plugin file (similar to package.json with name, version, and author information). In the same directory, you can add skills, hooks, and other configurations that get packaged together within that plugin.
