@@ -57,3 +57,15 @@
 
 20. What is the standard context window size, and what is the extended limit available?
 20. The standard context window is 200,000 tokens, but it can be extended up to 1 million tokens.
+
+21. What is the purpose of skills in Claude Code?
+21. Skills are markdown files with specific procedures for repeated multi-step workflows. They allow you to define processes that would otherwise need to be re-explained to Claude every time, eliminating the need to repeatedly type the same prompts for tasks like deployment, integrations, or Q&A loops.
+
+22. How does Claude Code determine when to invoke a skill automatically?
+22. Claude determines skill invocation based on the skill's description field. By default, the name and description of skills are sent with prompts. When a prompt matches the skill's description, the model may call it automatically. Users can also explicitly invoke skills as slash commands.
+
+23. What configuration option prevents a model from automatically invoking a skill, making it only available as a manual slash command?
+23. Setting "disable model invocation: true" in the skill's front matter prevents the model from automatically invoking the skill, keeping it only available for manual user invocation via slash commands.
+
+24. How can you pass arguments to a skill in Claude Code?
+24. You can pass arguments to skills using standard argument syntax. For example, if you have a deploy skill that accepts an environment argument, you can invoke it with "deploy staging" or "deploy production", and the skill will use the specified argument in its execution.
