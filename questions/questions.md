@@ -135,3 +135,15 @@ NOTE : The /agents wizard has been removed as of v.2..1.198. Source
 
 45. What is the purpose of the CLAUDE_PLUGIN_ROOT variable in plugin development?
 45. The CLAUDE_PLUGIN_ROOT variable ensures consistent path references across different teams and organizations. Since plugins are shared, the root directory is dynamic, and this variable makes paths relative to the plugin's root regardless of where it's installed.
+
+46. How can Claude Design projects be transferred to Claude Code Web?
+46. Claude Design projects can be shared with a handoff feature that allows them to be sent directly to Claude Code Web (claude.ai/code). This enables immediate opening of the design in the code environment, where it can offer to scaffold a codebase from the design.
+
+47. What information does Claude Code Desktop send to the model when using the screenshot selection feature?
+47. When using the screenshot selection feature, Claude Code Desktop takes a screenshot and sends the component code (for example, React component), all the props, and all the types to the model. This provides the model with complete context about what needs to be modified.
+
+48. What is a compact hint in Claude Code, and why is it useful?
+48. A compact hint is additional instruction provided when compacting context, such as 'make sure you keep all my previous comments and keep all the plans.' It helps the model prioritize what to retain during compaction. This is especially useful for large conversations where the model might otherwise forget important details like specific instructions or plans.
+
+49. What is the difference between using 'clear' versus starting a new session in Claude Code?
+49. Clear and starting a new session are functionally similar—both start fresh without retaining any conversation history. The main difference is preference: clear keeps you in the same window, while starting a new session opens a new tab or terminal. Use either when switching to an entirely new task where you don't need to retain any history from the previous conversation.
