@@ -147,3 +147,15 @@ NOTE : The /agents wizard has been removed as of v.2..1.198. Source
 
 49. What is the difference between using 'clear' versus starting a new session in Claude Code?
 49. Clear and starting a new session are functionally similar—both start fresh without retaining any conversation history. The main difference is preference: clear keeps you in the same window, while starting a new session opens a new tab or terminal. Use either when switching to an entirely new task where you don't need to retain any history from the previous conversation.
+
+50. What are connectors in Cowork analogous to?
+50. Connectors in Cowork are analogous to MCPs (Model Context Protocols). They allow Cowork to integrate with various services like Google Drive, Calendar, Gmail, Slack, and Chrome.
+
+51. What are the two mode options in Cowork that correspond to similar features in Claude Code?
+51. Cowork has options to 'ask for permissions' or 'skip all approvals', which correspond to bypass and auto mode in Claude Code.
+
+52. How can Claude Code (or Cowork) be used to find files on a computer based on vague descriptions?
+52. Claude Code and Cowork can find files based on vague contextual descriptions by searching through multiple data sources. For example, they can search for contextual information like weather data, dates, and file contents to locate a specific file even without knowing its exact name or location. This makes them useful replacements for limited built-in search tools like Siri.
+
+53. What system scripting capability allows Claude Code (and similar tools) to change Mac settings like backgrounds, alarms, and notifications?
+53. AppleScript. Claude Code has access to AppleScript, which allows it to interact with macOS and change system settings including backgrounds, alarms, and notifications. This enables Claude Code to be used beyond coding tasks for general OS interactions.
