@@ -99,3 +99,15 @@
 
 34. What is a Claude Code plugin and what can it contain?
 34. A plugin is a package stored in a separate repository or folder that contains a .claude plugin file (similar to package.json with name, version, and author information). In the same directory, you can add skills, hooks, and other configurations that get packaged together within that plugin.
+
+NOTE : The /agents wizard has been removed as of v.2..1.198. Source
+@"code-reviewer (agent)" analyze the code
+
+35. What is a sub-agent and how does its context differ from the main agent?
+35. A sub-agent is a separate loop that runs in its own forked environment with its own context, tools, and system prompt. It runs in the background and only returns results to the main agent, ensuring that its tool call results and intermediate steps don't pollute the main conversation's context.
+
+36. What is the difference between creating a personal agent versus a project-specific agent?
+36. A personal agent can be reused across multiple projects and repositories, while a project-specific agent is limited to a single project or repository.
+
+37. Why do sub-agents tend to consume a large number of tokens?
+37. Sub-agents use a lot of tokens because they essentially start from scratch with their own context. They don't have cached prompts at that point, and when multiple sub-agents run in parallel, each one makes its own requests, multiplying token usage significantly.
